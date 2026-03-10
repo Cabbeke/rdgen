@@ -5,19 +5,17 @@ services:
     image: bryangerlach/rdgen:latest
     restart: unless-stopped
     environment:
-      SECRET_KEY: "django-insecure-!(t-!f#6g#sr%yfded9(xha)g+=!6craeez^cp+*&bz_7vdk61"
-      GHUSER: "github_username"
-      GHBEARER: "github_access_token"
-      GENURL: "accessible_url_of_server"
-      ZIP_PASSWORD: ""
+      SECRET_KEY: "8ce020cdd42465db8da57efaef0f8f5b6bd635afdd21fade79cc70c8220d1e7418da67913559f1c642ee3a6c69bb648abc2652e985a321bf90f9ad607ed18d0a89b718d904cf45ad4fb3a7a75046fc560e9f7df771c790d8b24a322cf0b6713edb833cef"
+      GHUSER: "Cabbeke"
+      GHBEARER: "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"
+      GENURL: "https://rdgen.crayoneater.org"
+      ZIP_PASSWORD: "aa951bb49de974d6d0e1cb35b2fb3e4208872f2b5a086065b5ae5691c4bb5424b43d2575545a5d03c46dadc63610ce7d24e2f6dfdb64ae7a2dd70396a7eebdd17070581e3c6fc0ef05abea516bffd296c29eee4ceca0ac8e8d48a8fe41f26371d66f1d00"
       GHBRANCH: "master"
       PROTOCOL: "https"
       REPONAME: "rdgen"
       SH_SECRET: ""
     ports:
       - "8000:8000"
-    dns:
-      - 8.8.8.8
     volumes:
       - ./exe:/opt/rdgen/exe
       - ./png:/opt/rdgen/png
